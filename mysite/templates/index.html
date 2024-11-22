@@ -1,0 +1,403 @@
+{% extends 'base.html' %} {% load static %} {% block content %}
+<!-- Hero Section -->
+<!--<section class="hero">
+  <div class="overlay">
+    <h1 class="left">
+      <span class="word african">Afrikan</span> <br />
+      <span class="word declaration">Declaration</span> <br />
+      <span class="word indaba">Indaba</span>
+    </h1>
+    <p class="right">
+      <span class="date">18<sup>th</sup> Dec 24'</span><br />
+      <span class="location">Lusaka, Zambia.</span>
+    </p>
+  </div>
+</section>
+
+<!-- Hosted By Section -->
+<div class="hosted-section">
+  <div class="container text-center">
+    <p>Hosted by <span class="state55" id="typing-text"></span></p>
+  </div>
+</div>
+
+<section class="about-section">
+  <div class="about-content">
+    <h2>About ADI</h2>
+    <hr />
+    <p>
+      The conference will afford participants an opportunity to share
+      experiences on a range of African fundamental matters including helping
+      them identify and remove obstacles to Africa’s progress. The expected
+      outcomes include the provision of a blue print thereof to the African
+      Union and all actors for onward implementation.
+    </p>
+    <p>
+      Over 1,000 participants are therefore expected to gather in Zambia and
+      hundreds more expected to participate through online applications of
+      Thematic Work Groups (TWGs) to voice their concerns on the direction of
+      Africa.
+    </p>
+  </div>
+  <div class="about-image">
+    <img src="{% static 'images/afric1.png' %}" alt="About ADI" />
+  </div>
+</section>
+<!--
+<section id="countdown-section" class="countdown-section">
+  <div class="countdown-header">Event will start in:</div>
+  <div class="countdown-description">{{ event.description }}</div>
+  <p>{{ event.event_date }}</p>
+
+  <div class="countdown-container">
+    <div class="countdown-box" id="days">
+      <div class="countdown-number">00</div>
+      <div class="countdown-label">DAYS</div>
+    </div>
+    <div class="countdown-box red" id="hours">
+      <div class="countdown-number">00</div>
+      <div class="countdown-label">HOURS</div>
+    </div>
+    <div class="countdown-box" id="minutes">
+      <div class="countdown-number">00</div>
+      <div class="countdown-label">MINUTES</div>
+    </div>
+    <div class="countdown-box red" id="seconds">
+      <div class="countdown-number">00</div>
+      <div class="countdown-label">SECONDS</div>
+    </div>
+  </div>
+</section>-->
+
+<section class="speakers-section">
+  <h2>ADI Speakers</h2>
+  <div class="carousel">
+    <!-- First Set of Speakers -->
+    <div class="carousel-set active">
+      <div class="speaker">
+        <img
+          src="{% static 'images/male.webp' %}"
+          alt="Speaker 1"
+          class="headshot"
+        />
+        <p>
+          Maulana Karenga<br />
+          Founder‑Kwanza
+        </p>
+      </div>
+      <div class="speaker">
+        <img
+          src="{% static 'images/male.webp' %}"
+          alt="Speaker 2"
+          class="headshot"
+        />
+        <p>Prof.PLO Lumumba<br />Law Professor <br />and Pan‑Africanist</p>
+      </div>
+      <div class="speaker">
+        <img
+          src="{% static 'images/sakwind.jpg' %}"
+          alt="Speaker 3"
+          class="headshot"
+        />
+        <p>
+          Sikwindi Situla<br />
+          President,State55
+        </p>
+      </div>
+      <div class="speaker">
+        <img
+          src="{% static 'images/female.webp' %}"
+          alt="Speaker 4"
+          class="headshot"
+        />
+        <p>
+          Amb.Dr.Arikana Chihombori‑Quao<br />
+          Founder‑Africa Diaspora<br />
+          Development Institute
+        </p>
+      </div>
+    </div>
+    <!-- Second Set of Speakers -->
+    <div class="carousel-set">
+      <div class="speaker">
+        <img
+          src="{% static 'images/male.webp' %}"
+          alt="Speaker 5"
+          class="headshot"
+        />
+        <p>
+          Julius Malema<br />Leader—Economic Freedom Fighters (South Africa)
+        </p>
+      </div>
+      <div class="speaker">
+        <img
+          src="{% static 'images/male.webp' %}"
+          alt="Speaker 6"
+          class="headshot"
+        />
+        <p>Michael Thompson<br />CEO, OBT‑Social/Sikhona</p>
+      </div>
+      <div class="speaker">
+        <img
+          src="{% static 'images/male.webp' %}"
+          alt="Speaker 7"
+          class="headshot"
+        />
+        <p>Amefika Geuka author‑’Building Bridges over Troubled Waters’</p>
+      </div>
+      <div class="speaker">
+        <img
+          src="{% static 'images/male.webp' %}"
+          alt="Speaker 8"
+          class="headshot"
+        />
+        <p>Rutendo Matinyarare<br />Speaker</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="kwanzaa-celebration-section">
+  <div class="kwanzaa-layout">
+    <div class="kwanzaa-text">
+      <h2>Attend the Kwanzaa<br />Celebrations</h2>
+      <div class="green-divider"></div>
+      <p>
+        Kwanzaa, an annual celebration of the African people, will also take
+        place every evening of the conference days in Lusaka, Zambia. Specific
+        registration details will be made available here. This Kwanzaa
+        celebration will be a memorable blend of history, heritage, and joy,
+        offering an opportunity to unite in celebration of African unity,
+        culture, and shared values.
+      </p>
+    </div>
+    <div class="kwanzaa-image">
+      <img src="{% static 'images/kwanza3.jpg'%}" alt="Kwanzaa Celebrations" />
+    </div>
+  </div>
+</section>
+<div class="center-section-container">
+  <div class="content-wrapper">
+    <div class="headline">
+      People Proclaiming the <strong>STATE <br />OF AFRIKA,</strong>
+      Making Africa Work.
+    </div>
+    <button
+      class="cta-button"
+      onclick="window.location.href='{% url 'vote' %}'"
+    >
+      Vote
+    </button>
+  </div>
+</div>
+
+<button class="cta-button" onclick="window.location.href='{% url 'vote' %}'">
+  Vote
+</button>
+
+<script>
+  // Countdown logic
+  const eventDate = new Date(
+    "{{ event.event_date|date:'Y-m-d H:i:s' }}"
+  ).getTime(); // formatted date
+
+  const countdown = setInterval(function () {
+    const now = new Date().getTime();
+    const distance = eventDate - now;
+
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor(
+      (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+    );
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    document
+      .getElementById("days")
+      .querySelector(".countdown-number").innerText = days;
+    document
+      .getElementById("hours")
+      .querySelector(".countdown-number").innerText = hours;
+    document
+      .getElementById("minutes")
+      .querySelector(".countdown-number").innerText = minutes;
+    document
+      .getElementById("seconds")
+      .querySelector(".countdown-number").innerText = seconds;
+
+    if (distance < 0) {
+      clearInterval(countdown);
+      document.querySelector(".countdown-header").innerText =
+        "The event has started!";
+    }
+  }, 1000);
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const sets = document.querySelectorAll(".carousel-set");
+    let currentSet = 0;
+    let currentSpeaker = 0;
+
+    function showNextSet() {
+      // Hide the current set
+      sets[currentSet].classList.remove("active");
+      // Move to the next set
+      currentSet = (currentSet + 1) % sets.length;
+      // Reset the speaker index for the new set
+      currentSpeaker = 0;
+      // Show the new set and highlight the first speaker
+      sets[currentSet].classList.add("active");
+      updateSpeakerFocus();
+    }
+
+    function updateSpeakerFocus() {
+      // Get all speakers in the current active set
+      const speakers = sets[currentSet].querySelectorAll(".speaker");
+      // Remove 'focused' class from all speakers
+      speakers.forEach((speaker) => speaker.classList.remove("focused"));
+      // Add 'focused' class to the current speaker
+      speakers[currentSpeaker].classList.add("focused");
+      // Move to the next speaker in the current set
+      currentSpeaker = (currentSpeaker + 1) % speakers.length;
+    }
+
+    // Rotate through sets every 8 seconds
+    setInterval(showNextSet, 8000);
+    // Rotate through speakers in the current set every 2 seconds
+    setInterval(updateSpeakerFocus, 2000);
+  });
+
+  document.addEventListener("DOMContentLoaded", function () {
+    // Function to check if an element is in the viewport
+    function isInViewport(element) {
+      const rect = element.getBoundingClientRect();
+      return (
+        rect.top < window.innerHeight &&
+        rect.bottom > 0 &&
+        rect.left < window.innerWidth &&
+        rect.right > 0
+      );
+    }
+
+    // Elements to animate
+    const aboutHeading = document.querySelector(".about-content h2");
+    const aboutImage = document.querySelector(".about-image img");
+
+    // Function to add 'in-view' class when elements come into view
+    function checkAnimation() {
+      if (isInViewport(aboutHeading)) {
+        aboutHeading.classList.add("in-view");
+      }
+      if (isInViewport(aboutImage)) {
+        aboutImage.classList.add("in-view");
+      }
+    }
+
+    // Initial check on load
+    checkAnimation();
+
+    // Check on scroll and resize
+    window.addEventListener("scroll", checkAnimation);
+    window.addEventListener("resize", checkAnimation);
+  });
+
+  //typing
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const textElement = document.getElementById("typing-text");
+    const text = "State55";
+    let index = 0;
+    let hasTyped = false; // To ensure typing only happens once
+
+    function type() {
+      if (index < text.length) {
+        textElement.textContent += text.charAt(index);
+        index++;
+        setTimeout(type, 150); // Adjust speed here
+      }
+    }
+
+    function isInViewport(element) {
+      const rect = element.getBoundingClientRect();
+      return (
+        rect.top >= 0 &&
+        rect.left >= 0 &&
+        rect.bottom <=
+          (window.innerHeight || document.documentElement.clientHeight) &&
+        rect.right <=
+          (window.innerWidth || document.documentElement.clientWidth)
+      );
+    }
+
+    function onScroll() {
+      if (!hasTyped && isInViewport(textElement)) {
+        type();
+        hasTyped = true; // Ensure typing happens only once
+        window.removeEventListener("scroll", onScroll); // Remove event listener after typing starts
+      }
+    }
+
+    window.addEventListener("scroll", onScroll); // Attach scroll event
+  });
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const kwanzaaHeading = document.querySelector(".kwanzaa-text h2");
+    const kwanzaaImage = document.querySelector(".kwanzaa-image img");
+
+    // Check if element is in viewport
+    function isInViewport(element) {
+      const rect = element.getBoundingClientRect();
+      return (
+        rect.top < window.innerHeight &&
+        rect.bottom >= 0 &&
+        rect.left < window.innerWidth &&
+        rect.right >= 0
+      );
+    }
+
+    // Function to check and add 'in-view' class
+    function onScroll() {
+      if (isInViewport(kwanzaaHeading)) {
+        kwanzaaHeading.classList.add("in-view");
+      }
+      if (isInViewport(kwanzaaImage)) {
+        kwanzaaImage.classList.add("in-view");
+      }
+    }
+
+    // Initial check on page load
+    onScroll();
+
+    // Listen to scroll and resize events
+    window.addEventListener("scroll", onScroll);
+    window.addEventListener("resize", onScroll);
+  });
+
+  //vote
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const ctaButton = document.querySelector(".cta-button");
+
+    function isInViewport(element) {
+      const rect = element.getBoundingClientRect();
+      return (
+        rect.top >= 0 &&
+        rect.left >= 0 &&
+        rect.bottom <=
+          (window.innerHeight || document.documentElement.clientHeight) &&
+        rect.right <=
+          (window.innerWidth || document.documentElement.clientWidth)
+      );
+    }
+
+    function onScroll() {
+      if (isInViewport(ctaButton)) {
+        ctaButton.classList.add("in-view");
+        window.removeEventListener("scroll", onScroll); // Remove scroll listener after animation triggers
+      }
+    }
+
+    window.addEventListener("scroll", onScroll);
+  });
+</script>
+
+{% endblock %}

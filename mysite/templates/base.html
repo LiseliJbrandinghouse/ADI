@@ -1,0 +1,124 @@
+<!--{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{% block title %}African Declaration Indaba{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <div class="container">
+          <div class="logo">
+            <img src="{% static 'images/logoadi.webp' %}" alt="Logo" />
+          </div>
+          <div class="menu">
+            <ul>
+              <li class="dropdown">
+                <a href="{% url 'home' %}">About ADI</a>
+                <!-- Dropdown Menu 
+                <ul class="dropdown-menu">
+                  <li><a href="{% url 'fife' %}">A Fife for freedom</a></li>
+                  <li><a href="{% url 'outcome' %}">Expected outcomes</a></li>
+                </ul>
+              </li>
+              <li><a href="{% url 'speakers' %}">Speakers</a></li>
+              <li><a href="{% url 'accommodation' %}">Accommodation</a></li>
+              <li><a href="{% url 'donate' %}">Donate</a></li>
+              <li class="dropdown">
+                <a href="#">Docs</a>-->
+                <!-- Dropdown Menu -->
+                <ul class="dropdown-menu">
+                  <li><a href="{% url 'documents' %}">Documents</a></li>
+                  <li><a href="{% url 'media' %}">Media</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+          <div class="hamburger">
+            <i class="fas fa-bars"></i>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    {% block content %} {% endblock %}
+
+    <footer>
+      <div class="footer-container">
+        <!-- Column 1: ADI Conference -->
+        <div class="footer-column">
+          <h3>ADI Conference</h3>
+          <a href="#"
+            >The AFRIKA DECLARATION INDABA will be convened in Lusaka,Zambia
+            from the 27th‑30th December, 2024.</a
+          >
+          <a href="{% url 'speakers' %}">Speakers</a>
+          <a href="{% url 'donate' %}">Donate</a>
+          <a href="{% url 'registration' %}">Registration</a>
+          <a href="https://api.whatsapp.com/send?phone=260771033924"
+            >WhatsApp us
+          </a>
+        </div>
+
+        <!-- Column 2: State55 -->
+        <div class="footer-column">
+          <h3>State55</h3>
+          <a href="#"
+            >STATE55 is a people’s movement in Africa, with diaspora chapters
+            across the globe. We foster unity among the people of Africa and
+            those of African descent in order to secure a humane place for
+            all.</a
+          >
+          <a href="https://state55.net/">state55.net</a>
+          <a href="#">About State55</a>
+        </div>
+
+        <!-- Column 3: Contact Us -->
+        <div class="footer-column">
+          <h3>Contact Us</h3>
+          <address>
+            <a href="mailto:info@state55.org" aria-label="Email"
+              ><i class="fas fa-envelope"></i>info@state55.org</a
+            >
+            Telephone: <a href="tel:+260950201186">+260 950 201 186</a>
+            <a href="tel:+26097745332">+260 977 453 132</a>
+          </address>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        // Toggle main menu on hamburger click
+        $(".hamburger").click(function () {
+          $(".menu").toggleClass("open");
+        });
+
+        // Toggle dropdown menu on click for mobile view
+        $(".dropdown > a").click(function (event) {
+          event.preventDefault(); // Prevents the link from navigating
+          $(this).siblings(".dropdown-menu").toggleClass("show");
+        });
+      });
+
+      // JavaScript to make the logo shrink on scroll
+      window.addEventListener("scroll", function () {
+        const navbar = document.querySelector(".navbar");
+        if (window.scrollY > 50) {
+          navbar.classList.add("scrolled"); // Shrinks logo on scroll
+        } else {
+          navbar.classList.remove("scrolled"); // Resets to large logo at top
+        }
+      });
+    </script>
+  </body>
+</html>

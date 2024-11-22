@@ -1,0 +1,132 @@
+{% extends 'base.html' %} {% load static %} {% block content %}
+
+<section class="fife-section">
+  <div class="fife-content">
+    <h2>A Fife for Freedom</h2>
+
+    <p>
+      Our lessons of over 60 years since the first state was planted in Africa,
+      and since the fall of the apartheid regime in South Africa in 1994, all
+      demand for new action in Africa. This includes eugenics against
+      Africans—the dreaded decades of HIV/AIDS, profound experiences of
+      COVID‑19, the genetically modified foods, and a compromised pharmaceutical
+      industry. Others are the devastating wars in Africa and elsewhere,
+      including the growing instability in the Sahel region and wide-spread
+      effects of climate change. The growing racism especially on our African
+      brothers and sisters beyond the shores of Africa have taken their own toll
+      on us. All these indicate that AFRICA is now at a tipping point wherein
+      she begs for urgent and extra‑ordinary measures from every African in the
+      world.
+    </p>
+    <p>
+      As the possibility of the Third World War teeters before our eyes, global
+      forces continue to operate Africa under their own tethers of a mafia law.
+      And so, until Africa operates as one, the future for all Africans is cast
+      in serious jeopardy.
+    </p>
+    <p>
+      Pan‑Afrikanism has a long history of the anti‑slavery, anti‑racial,
+      anti‑colonialism, and anti‑apartheid periods. Part of that history
+      includes the First All‑African Conference held in Accra (1958), the second
+      in Tunis (1960), and the third in Cairo (1961). These conferences yielded
+      remarkable results for our civil liberties and political freedoms, and yet
+      we still grapple with neo‑colonialism and social injustice with the need
+      to re‑master our destiny anew, thus the Afrika Declaration Indaba.
+    </p>
+    <p>
+      This and much more justifies why Africa, now and more than ever, needs a
+      united State of Africa—yes, the panacea of everything savvy to redress our
+      predicament and chart a new path forward.
+    </p>
+  </div>
+  <div class="fife-image">
+    <img src="{% static 'images/afric1.png' %}" alt="About ADI" />
+  </div>
+</section>
+<div class="hosted-section">
+  <div class="container text-center">
+    <p>
+      Join the Afrikan Declaration Indaba Hosted by
+      <span class="state55" id="typing-text"></span>
+    </p>
+  </div>
+</div>
+
+<section class="clarion-section">
+  <h2 class="clarion-heading">Our Clarion Call to Filial Duty</h2>
+  <div class="clarion-content">
+    <p>
+      Africa sits at the threshold of global changes of the need for stability.
+      But, Africa’s own myriad of problems demand for a new incus to thought
+      process. Clearly, the time to move from philosophizing to action has now
+      come. This demands a people’s pristine voice of democratic value and
+      expression. For this reason, the African masses are summoned to the
+      exercise of their right to self‑determination as a democratic means
+      through which a State of Africa can now be proclaimed. There is also a
+      need for tackling issues of immediate goals for socio‑economic inclusion
+      and outright emancipation of all the peoples of Africa. At this
+      conference, therefore, a perfect moment has arisen for the people to make
+      a historic proclamation of one State of Africa—in Africa’s very natural
+      ethos to unity in diversity based on our rich cultural heritage. That way
+      we will be dealing with the cause and not symptoms of Africa’s predicament
+      within opposing global forces.
+    </p>
+    <p>
+      Without a stable, strong, and prosperous Africa, at peace with herself,
+      while firmly anchored on her own democratic value system, the African
+      people cannot hold hope for dignity in the spaces of competing global
+      ideological poles. The fate, therefore, of one African in one corner of
+      the world is well intertwined with the fate of every African at home; thus
+      the need to act together. The Africa of our dreams is one that is
+      illuminated by safety, inclusion, and the pursuit of joy and happiness for
+      all of her peoples—yes, wherein it is envisaged of us to witness a speedy
+      vestige of bad governance fading away in the mirage of the past.
+    </p>
+  </div>
+  <div class="clarion-image">
+    <img
+      src="{% static 'images/africa-clarion.png' %}"
+      alt="Map of Africa with clarion call design"
+    />
+  </div>
+</section>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const textElement = document.getElementById("typing-text");
+    const text = "State55";
+    let index = 0;
+    let hasTyped = false; // To ensure typing only happens once
+
+    function type() {
+      if (index < text.length) {
+        textElement.textContent += text.charAt(index);
+        index++;
+        setTimeout(type, 150); // Adjust speed here
+      }
+    }
+
+    function isInViewport(element) {
+      const rect = element.getBoundingClientRect();
+      return (
+        rect.top >= 0 &&
+        rect.left >= 0 &&
+        rect.bottom <=
+          (window.innerHeight || document.documentElement.clientHeight) &&
+        rect.right <=
+          (window.innerWidth || document.documentElement.clientWidth)
+      );
+    }
+
+    function onScroll() {
+      if (!hasTyped && isInViewport(textElement)) {
+        type();
+        hasTyped = true; // Ensure typing happens only once
+        window.removeEventListener("scroll", onScroll); // Remove event listener after typing starts
+      }
+    }
+
+    window.addEventListener("scroll", onScroll); // Attach scroll event
+  });
+</script>
+
+{% endblock %}
