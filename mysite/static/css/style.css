@@ -2559,3 +2559,109 @@ button[type="submit"] {
   font-size: 16px;
   color: #333333;
 }
+
+/* Styling for Alternative Donation Section */
+.donate-alternatives {
+  background-color: #f8f9fa; /* Light grey background for contrast */
+  padding: 30px 20px;
+  border-radius: 10px;
+  margin: 20px auto;
+  max-width: 800px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-top: -90px;
+}
+
+.donate-alternatives h2 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: #16454a;
+}
+
+.donate-alternatives p {
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.donation-methods {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.method {
+  flex: 1 1 calc(50% - 20px); /* Take 50% of the container width minus the gap */
+  background-color: #ffffff;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  text-align: left;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.method h3 {
+  font-size: 1.4rem;
+  color: #bd1818;
+  margin-bottom: 10px;
+}
+
+.method p,
+.method ul {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.method ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.method ul li {
+  margin-bottom: 5px;
+}
+
+@media (max-width: 768px) {
+  .donation-methods {
+    flex-direction: column; /* Stack methods on top of each other */
+  }
+
+  .method {
+    flex: 1 1 100%; /* Take full width in smaller screens */
+  }
+}
+
+/* Ensure donate-alternatives comes first visually on mobile */
+@media (max-width: 768px) {
+  .donate-container {
+    display: flex;
+    flex-direction: column-reverse; /* Reverse the order of children */
+    width: 100%;
+    height: 200vh;
+    background: url(/static/images/together.jpg) no-repeat center center / cover;
+  }
+
+  .donate-alternatives {
+    order: -1; /* Place the alternatives section first */
+  }
+
+  .donate-form {
+    order: 0; /* Keep the form after alternatives */
+  }
+}
+
+/* Style adjustments for mobile alignment */
+.donate-form {
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  margin-top: 200px;
+}
+
+.donate-alternatives {
+  padding: 20px 10px;
+  text-align: center;
+}

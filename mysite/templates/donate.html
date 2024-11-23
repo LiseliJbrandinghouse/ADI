@@ -1,13 +1,46 @@
 {% extends 'base.html' %} {% load static %} {% block content %}
 <div class="donate-container">
   <div class="donate-background">
-    <h1>DONATE NOW</h1>
-    <p>
-      People Proclaiming the <strong>STATE <br />OF AFRIKA,</strong> Making
-      Africa Work.
-    </p>
-    <p><a href="#"> Donate here.</a></p>
+    <div class="donate-alternatives">
+      <h2>Alternative Donation Methods</h2>
+      <p>
+        While we set up our secure card payment gateway, you can still support
+        the vision of the **State of Afrika** by sending your contributions
+        through the following methods:
+      </p>
+
+      <div class="donation-methods">
+        <div class="method">
+          <h3>Airtel Money</h3>
+          <p>
+            Send your donation to the following Airtel Money number:
+            <strong>+260 123 456 789</strong>.
+          </p>
+          <p>
+            Please include your name and the purpose of the donation in the
+            reference section.
+          </p>
+        </div>
+        <div class="method">
+          <h3>Word Remit</h3>
+          <p>
+            For donors abroad, kindly use <strong>Word Remit</strong> to send
+            your donations to:
+          </p>
+          <ul>
+            <li><strong>Recipient Name:</strong> John Doe</li>
+            <li><strong>Country:</strong> Zambia</li>
+            <li><strong>Mobile Number:</strong> +260 987 654 321</li>
+          </ul>
+          <p>
+            After sending your donation, please email us at
+            <strong>donate@stateofafrika.org</strong> with your details.
+          </p>
+        </div>
+      </div>
+    </div>
   </div>
+
   <div class="donate-form">
     <form id="donationForm" method="POST" action="#">
       {% csrf_token %}
